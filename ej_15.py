@@ -76,22 +76,24 @@ g.insertar_arista('isla jeju', 'rio subterraneo de puerto princesa', 3000)
 g.insertar_arista('rio subterraneo de puerto princesa', 'parque nacional de komodo', 1600)
 
 # C
-# g.barrido_profundidad('amazonas')
-# print()
+arbol_natural_min = g.kruskal()
+arbol_natural_min_1= arbol_natural_min[0].split('-')
+arbol_natural_min_2 = arbol_natural_min[1].split('-')
+peso_total = 0
 
-# arbol_natural_min = g.kruskal_tipo()
-# arbol_natural_min = arbol_natural_min[0].split('-')
+print('Arbol de expansion minima de maravillas arquitectonicas:')
+for nodo in arbol_natural_min_1:
+    nodo = nodo.split(';')
+    # peso_total += int(nodo[2])
+    print(f'{nodo[0]} - {nodo[1]} - {nodo[2]}')
+print()
 
-# peso_total = 0
-
-# for nodo in arbol_natural_min:
-#     nodo = nodo.split(';')
-#     peso_total += int(nodo[2])
-#     # print(f'{nodo[0]} - {nodo[1]} - {nodo[2]}')
-
-# print()
-# print(f'se necesitan {peso_total}m de cable')
-# print()
+print('Arbol de expansion minima de maravillas naturales:')
+for nodo in arbol_natural_min_2:
+    nodo = nodo.split(';')
+    # peso_total += int(nodo[2])
+    print(f'{nodo[0]} - {nodo[1]} - {nodo[2]}')
+print()
 
 # D
 paises = g.contar_maravillas()

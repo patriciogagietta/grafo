@@ -398,6 +398,8 @@ class Grafo():
 
         return paises_natural, paises_aarquitectonico
 
+        
+
 #! algoritmos especiales dijkstra prim kruskal
 
 
